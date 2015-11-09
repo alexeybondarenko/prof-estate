@@ -1,0 +1,51 @@
+
+@import compass
+@import lib/base
+@import grid/grid
+
+$header-color: #262626
+$text-light-color: #7a7a7a
+$header-light-color: #606060
+$input-placeholder-color: #d4d4d4
+$border-color: #939393
+$green: #49ae1d
+$red: #f54040
+$assertive: #7940f5
+$blue: #008EEC
+$border-light: #dadada
+
+body
+  font: 300 16px/1.4 'Oswald', Helvetica, Arial, sans-serif
+  background: #fff
+  color: #000
+
+.wrap
+  width: 100%
+  overflow: hidden
+.nav
+  color: $blue
+  border-bottom: 1px solid $border-color
+  padding: 15px 0
+  .nav__logo
+    display: inline-block
+  .nav__menu
+    float: right
+.menu
+  &.menu_main
+    line-height: 56px
+  a
+    margin-left: 20px
+    &:hover
+      text-decoration: underline
+h1
+  // Text style for "Result of anal"
+  color: $header-color
+  font-size: 40px
+  font-weight: 400
+
+.icon
+  display: inline-block
+
+@each $s in bright, exclamation, logo, winner
+  .icon-#{$s}
+    +s(#{$s})
