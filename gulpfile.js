@@ -65,6 +65,11 @@ gulp.task('copy-statics', function() {
         .pipe(gulp.dest('./www'));
 });
 
+gulp.task('copy-dirs', function() {
+  return gulp.src(['./src/fonts/**/*'], {base: './src'})
+    .pipe(gulp.dest('./www'));
+});
+
 // Scripts
 gulp.task('copy-scripts', function() {
     return gulp.src(['./src/js/**/*'], {base: './src'})
@@ -108,4 +113,4 @@ gulp.task('deploy', ['deploy-prefix'], function() {
 
 // Base tasks
 gulp.task('default', sequence('build', ['server', 'watch']));
-gulp.task('build', sequence('clean', ['copy-bower','copy-images','copy-statics', 'copy-scripts', 'build-styles', 'build-jade']));
+gulp.task('build', sequence('clean', ['copy-bower','copy-images','copy-statics', 'copy-dirs', 'copy-scripts', 'build-styles', 'build-jade']));
