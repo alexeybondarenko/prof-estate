@@ -23,7 +23,7 @@ body
   background: #fff
   color: #000
 
-input, button, textarea
+input, button, textarea, select
   +f
 
 //grid
@@ -140,6 +140,7 @@ $prefix: 'fi'
     font-size: 14px
     display: inline-block
     border-left: 1px solid $border-light
+    cursor: pointer
 
     input:checked + .switcher-item__content
       background-color: $dark-blue
@@ -183,6 +184,7 @@ $prefix: 'fi'
   display: inline-block
   padding: 8px 12px
   vertical-align: top
+  cursor: pointer
 
   &.btn_icon
     font-size: 12px
@@ -259,7 +261,8 @@ $prefix: 'fi'
   margin-top: 70px
   position: relative
   .section__text
-    padding-left: 70px
+    +min-screen($screen-sm-min)
+      padding-left: 70px
 
 .form__row
   margin-top: 20px
@@ -269,8 +272,20 @@ $prefix: 'fi'
 
   color: #606060
   margin-bottom: 5px
+.input-label-big
+  line-height: 44px
+  font-size: 18px
+  font-weight: 400
+.light-header
+  font-size: 20px
+  text-transform: uppercase
+  color: $light-text
+  //margin-top: 1em
+.block
+  padding: 10px
+  margin-top: 10px
 
-.input
+.input, .select select
   display: inline-block
   width: 100%
   border: 1px solid #939393
@@ -279,6 +294,19 @@ $prefix: 'fi'
   +placeholder
     font-weight: 200
 
+.select
+  select
+    background-color: transparent
+    appearance: none
+  position: relative
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 18px
+    right: 15px
+
+    +arr(10, 8, black, b)
 .col-1000w
   max-width: 1060px
   margin-left: auto

@@ -1,137 +1,111 @@
-doctype html
-html
-  head(lang='en')
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-    title prof-estate
-    link(href='https://fonts.googleapis.com/css?family=Oswald:400,300,700', rel='stylesheet', type='text/css')
-    link(rel='stylesheet', href='css/app.css')
-  body
-    .wrap.container
-      .nav
-        .col-800w
-            .nav__logo
-              //.icon.icon-logo
-              img(src="http://placehold.it/62x52")
-            .nav__menu
-              .menu.menu_main
-                a(href="#about-us") About us
-                a(href="#team") Team
-                a(href="#career") Career
-                a(href="#contacts") Contacts
-                a(href="#contacts") For developers
-                a(href="#contacts") For brokers
-      .main
-        .section.col-1000w
-          h1 Result of analysis
-          .graph
-            .graph__control
-              .switcher
-                label.switcher-item
-                  input(type="radio",name="type",value="Daily")
-                  .switcher-item__content
-                    span.icon.fi-daily Daily
-                label.switcher-item
-                  input(type="radio",name="type",value="Weekly")
-                  .switcher-item__content
-                    span.icon.fi-daily Weekly
-                label.switcher-item
-                  input(type="radio",name="type",value="Monthly", checked)
-                  .switcher-item__content
-                    span.icon.fi-daily Montly
-              .btn.btn_shadow.btn_icon
-                i.fi-download
-            .graph__content
-              img(src="http://placehold.it/1000x350")
-              //img(src="images/graphic.png")
-        .section.col-800w
-          .row.border-between
-            .col-sm-5.col-sm-offset-1
-              .icon.icon-bright.section-icon
-              .header-text Is your online
-                br
-                | channel effective?
-            .col-sm-6.section__text
-              .header-big.pull-right 400
-              .header-text The number of calls
-                br
-                | that you have
-                br
-                | to receive each month
-              p If you do not get this amount of calls, you should analyze
-                br
-                | your advertising activities on the Internet.
-              .header-text.pink Do you want to know
-                br
-                | how to increase efficacy?
-              .btn.btn_3d.btn_pink Order free express analysis
-        .section.col-800w
-          .row.border-between
-            .col-sm-5.col-sm-offset-1
-              .icon.icon-exclamation.section-icon
-              .header-text Your potential
-            .col-sm-6.section__text
-              .header-big.pull-right 850
-              .header-text The number of calls
-                br
-                | that you can receive
-                br
-                | each month
-              .header-text.pink Do you want to know
-                br
-                | how to get it?
-              .btn.btn_3d.btn_pink Order free express analysis
-        .section.col-800w
-          .row.border-between
-            .col-sm-5.col-sm-offset-1
-              .icon.icon-winner.section-icon
-              .header-text How are your
-                br
-                | competitors?
-            .col-sm-6.section__text
-              .header-big.pull-right.green 20
-                span.percent %
-              .header-text Your competitor site.ua
-                br
-                | gets
-                span.green  more
-                |  traffic than you
-              .header-big.pull-right.red 30
-                span.percent %
-              .header-text Your competitor site.ua
-                br
-                |  gets
-                span.red  less
-                |  traffic than you
+extends ./partitials/layout
+block content
+  .section.col-1000w
+    h1 Result of analysis
+    .graph
+      .graph__control
+        .switcher
+          label.switcher-item
+            input(type="radio",name="type",value="Daily")
+            .switcher-item__content
+              span.icon.fi-daily Daily
+          label.switcher-item
+            input(type="radio",name="type",value="Weekly")
+            .switcher-item__content
+              span.icon.fi-daily Weekly
+          label.switcher-item
+            input(type="radio",name="type",value="Monthly", checked)
+            .switcher-item__content
+              span.icon.fi-daily Montly
+        .btn.btn_shadow.btn_icon
+          i.fi-download
+      .graph__content
+        img(src="http://placehold.it/1000x350")
+  .section.col-800w
+    .row.border-between
+      .col-sm-5.col-sm-offset-1
+        .icon.icon-bright.section-icon
+        .header-text Is your online
+          br
+          | channel effective?
+      .col-sm-6.section__text
+        .header-big.pull-right 400
+        .header-text The number of calls
+          br
+          | that you have
+          br
+          | to receive each month
+        p If you do not get this amount of calls, you should analyze
+          br
+          | your advertising activities on the Internet.
+        .header-text.pink Do you want to know
+          br
+          | how to increase efficacy?
+        .btn.btn_3d.btn_pink Order free express analysis
+  .section.col-800w
+    .row.border-between
+      .col-sm-5.col-sm-offset-1
+        .icon.icon-exclamation.section-icon
+        .header-text Your potential
+      .col-sm-6.section__text
+        .header-big.pull-right 850
+        .header-text The number of calls
+          br
+          | that you can receive
+          br
+          | each month
+        .header-text.pink Do you want to know
+          br
+          | how to get it?
+        .btn.btn_3d.btn_pink Order free express analysis
+  .section.col-800w
+    .row.border-between
+      .col-sm-5.col-sm-offset-1
+        .icon.icon-winner.section-icon
+        .header-text How are your
+          br
+          | competitors?
+      .col-sm-6.section__text
+        .header-big.pull-right.green 20
+          span.percent %
+        .header-text Your competitor site.ua
+          br
+          | gets
+          span.green  more
+          |  traffic than you
+        .header-big.pull-right.red 30
+          span.percent %
+        .header-text Your competitor site.ua
+          br
+          |  gets
+          span.red  less
+          |  traffic than you
 
-              .header-text.pink Do you want to now how
-                br
-                | to get ahead of the competition?
-              .btn.btn_3d.btn_pink Order free express analysis
-        .section.col-1000w
-          .row
-            .col-sm-6
-              h1 Do you want to lower customer acquisition costs?
-              p Let's start with the analysis of your curren  online presence and compare it to best practices and your competitors:
-              ul.pink
-                li You vs best industry practices
-                li You vs your closest competitors
-              p All you need to do is input your website and you will get your free custom made PDF report prepared by our market analysis team.
-            .col-sm-6.section__text
-              h1
-                br
-              .form
-                label.form__row
-                  .input-label Your website
-                  input.input(type="text", placeholder="https://")
-                label.form__row
-                  .input-label Name
-                  input.input(type="text", placeholder="type your name")
-                label.form__row
-                  .input-label Email or phone
-                  input.input(type="text", placeholder="type your email of phone number")
-                .form__row
-                  .btn.btn_3d.btn_pink.btn_200w.pull-right Order
-
-
-    script(src='js/app.js')
+        .header-text.pink Do you want to now how
+          br
+          | to get ahead of the competition?
+        .btn.btn_3d.btn_pink Order free express analysis
+  .section.col-1000w
+    .row
+      .col-sm-6
+        h1 Do you want to lower customer acquisition costs?
+        p Let's start with the analysis of your curren  online presence and compare it to best practices and your competitors:
+        ul.pink
+          li You vs best industry practices
+          li You vs your closest competitors
+        p All you need to do is input your website and you will get your free custom made PDF report prepared by our market analysis team.
+      .col-sm-6.section__text
+        h1
+          br
+        .form
+          label.form__row
+            .input-label Your website
+            input.input(type="text", placeholder="https://")
+          label.form__row
+            .input-label Name
+            input.input(type="text", placeholder="type your name")
+          label.form__row
+            .input-label Email or phone
+            input.input(type="text", placeholder="type your email of phone number")
+          .form__row
+            .btn.btn_3d.btn_pink.btn_200w.pull-right Order

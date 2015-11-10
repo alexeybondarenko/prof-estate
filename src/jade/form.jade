@@ -1,0 +1,41 @@
+extends ./partitials/layout
+block content
+  .section.col-800w
+    h1 Analysis of activity
+      br
+      | on the internet
+    .form
+      label.form__row.row
+        .col-sm-3
+          .input-label-big.pink Country
+        .col-sm-7.col-sm-offset-1
+          .select
+            select
+              option UAE
+              option USA
+              option Ukraine
+              option France
+              option Germany
+              option UK
+      label.form__row.row
+        .col-sm-3
+          .input-label-big.pink Your site
+        .col-sm-7.col-sm-offset-1
+          input.input(placeholder="type site")
+      .row
+        .col-sm-7.col-sm-offset-4
+          .block
+            .light-header Optional Fields
+      label.form__row.row
+        .col-sm-3
+          .input-label-big.pink Your competitor's site 1
+        .col-sm-7.col-sm-offset-1
+          input.input(placeholder="type your competitor's site 1")
+      label.form__row.row
+        .col-sm-3
+          .input-label-big.pink Your competitor's site 2
+        .col-sm-7.col-sm-offset-1
+          input.input(placeholder="type your competitor's site 2")
+      .form__row.row
+        .col-sm-7.col-sm-offset-4
+          .btn.btn_3d.btn_pink.pull-right.btn_200w Search
