@@ -36,14 +36,13 @@ gulp.task('build-styles', function() {
     return gulp.src('./src/css/**/*.{sass,scss}')
         .pipe(compass({
             project: path.join(__dirname, ''),
-            http_images_path: '/images',
-            generated_images_path: 'www/images',
+            //config_file: './config.rb',
             http_path: '/',
+            generated_images_path: 'www/images',
             css: 'www/css',
             sass: 'src/css',
-            image: 'src/images',
-            debug: !argv.production,
             relative: true,
+            debug: !argv.production,
             style: argv.production ? 'compressed' : 'nested'
         }))
         .pipe(autoprefixer({
