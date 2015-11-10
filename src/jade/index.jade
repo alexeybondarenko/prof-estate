@@ -7,11 +7,12 @@ html
     link(href='https://fonts.googleapis.com/css?family=Oswald:400,300,700', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='css/app.css')
   body
-    .wrap
+    .wrap.container
       .nav
-        .container
+        .col-800w
             .nav__logo
-              .icon.icon-logo
+              //.icon.icon-logo
+              img(src="http://placehold.it/62x52")
             .nav__menu
               .menu.menu_main
                 a(href="#about-us") About us
@@ -20,9 +21,9 @@ html
                 a(href="#contacts") Contacts
                 a(href="#contacts") For developers
                 a(href="#contacts") For brokers
-      .main.container
-        h1 Result of analysis
-        .section
+      .main
+        .section.col-1000w
+          h1 Result of analysis
           .graph
             .graph__control
               .switcher
@@ -41,8 +42,9 @@ html
               .btn.btn_shadow.btn_icon
                 i.fi-download
             .graph__content
-              img(src="images/graphic.png")
-        .section
+              img(src="http://placehold.it/1000x350")
+              //img(src="images/graphic.png")
+        .section.col-800w
           .row.border-between
             .col-sm-5.col-sm-offset-1
               .icon.icon-bright.section-icon
@@ -62,8 +64,8 @@ html
               .header-text.pink Do you want to know
                 br
                 | how to increase efficacy?
-              .btn.btn_3d Order free express analysis
-        .section
+              .btn.btn_3d.btn_pink Order free express analysis
+        .section.col-800w
           .row.border-between
             .col-sm-5.col-sm-offset-1
               .icon.icon-exclamation.section-icon
@@ -78,8 +80,8 @@ html
               .header-text.pink Do you want to know
                 br
                 | how to get it?
-              .btn.btn_3d Order free express analysis
-        .section
+              .btn.btn_3d.btn_pink Order free express analysis
+        .section.col-800w
           .row.border-between
             .col-sm-5.col-sm-offset-1
               .icon.icon-winner.section-icon
@@ -105,9 +107,9 @@ html
               .header-text.pink Do you want to now how
                 br
                 | to get ahead of the competition?
-              .btn.btn_3d Order free express analysis
-        .section
-          .ro7
+              .btn.btn_3d.btn_pink Order free express analysis
+        .section.col-1000w
+          .row
             .col-sm-6
               h1 Do you want to lower customer acquisition costs?
               p Let's start with the analysis of your curren  online presence and compare it to best practices and your competitors:
@@ -115,7 +117,9 @@ html
                 li You vs best industry practices
                 li You vs your closest competitors
               p All you need to do is input your website and you will get your free custom made PDF report prepared by our market analysis team.
-            .col-sm-6
+            .col-sm-6.section__text
+              h1
+                br
               .form
                 label.form__row
                   .input-label Your website
@@ -127,7 +131,7 @@ html
                   .input-label Email or phone
                   input.input(type="text", placeholder="type your email of phone number")
                 .form__row
-                  .btn.btn_3d Order
+                  .btn.btn_3d.btn_pink.btn_200w.pull-right Order
 
 
     script(src='js/app.js')

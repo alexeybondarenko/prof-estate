@@ -16,14 +16,15 @@ $dark-blue: #002bc2
 $border-light: #dadada
 $light-text: #666
 =f
-  font: 300 14px/1.4 'Oswald', Helvetica, Arial, sans-serif
+  font: 300 16px/1.4 'Oswald', Helvetica, Arial, sans-serif
+
 body
   +f
   background: #fff
   color: #000
 
 input, button, textarea
-  font: 300 14px/1.4 'Oswald', Helvetica, Arial, sans-serif
+  +f
 
 //grid
 .border-between > [class*='col-']
@@ -47,34 +48,46 @@ input, button, textarea
 .nav
   color: $blue
   border-bottom: 1px solid $border-color
-  padding: 15px 0
+  padding: 2px 0
+  //.nav__in
+  //  max-width: 875px
+  //  margin: 0 auto
   .nav__logo
     display: inline-block
   .nav__menu
+    //margin-right: 135px
     float: right
 .main
-  margin-top: 40px
+  margin-bottom: 80px
+  margin-top: 80px
+  //margin-top: 40px
+  //.main__in
+    //max-width: 1060px
+    //margin-right: 220px
+    //margin-left: auto
 .menu
   &.menu_main
     line-height: 56px
   a
-    margin-left: 30px
+    margin-left: 32px
     text-transform: uppercase
     font-weight: 500
     font-size: 13px
-    letter-spacing: 0.035em
+    letter-spacing: 0.039em
     &:hover
       text-decoration: underline
 .header-big
-  font-size: 3.2em
+  font-size: 60px
+  line-height: 1
   font-weight: 500
   .percent
     font-weight: 300
 h1
   // Text style for "Result of anal"
   color: $header-color
-  font-size: 2em
+  font-size: 40px
   font-weight: 400
+  letter-spacing: 0.05em
 ul, ol li
   list-style: inherit
   margin-left: 2em
@@ -135,7 +148,8 @@ $prefix: 'fi'
       z-index: 1
       border-color: $dark-blue
     .switcher-item__content
-      padding: 6px 12px
+      background-color: #fff
+      padding: 6px 20px
       line-height: 20px
       vertical-align: top
       border-top: $switcher-border
@@ -150,9 +164,9 @@ $prefix: 'fi'
       border-right: $switcher-border
       border-radius: 0 $switcher-radius $switcher-radius 0
     &:first-child .switcher-item__content
-      padding-left: 16px
+      padding-left: 24px
     &:last-child .switcher-item__content
-      padding-right: 16px
+      padding-right: 24px
 
   .icon:before
     line-height: 1
@@ -174,40 +188,85 @@ $prefix: 'fi'
     font-size: 12px
     border-radius: 8px
     height: 36px
+  &.btn_3d
+    text-transform: uppercase
+    border: 1px solid $border-color
+    padding: 10px 30px
+    font-weight: 400
+    font-size: 18px
+    letter-spacing: 0.02em
+    position: relative
+    margin-bottom: 20px
+    &:after, &:before
+      content: ''
+      display: block
+      position: absolute
+      border: 1px solid $border-color
+
+    &:after
+      width: 10px
+      top: 5px
+      left: -12px
+      bottom: -7px
+      transform: skewY(-45deg)
+    &:before
+      height: 11px
+      top: 100%
+      left: -6px
+      right: 5px
+      transform: skewX(-45deg)
+
+
+
 
   &.btn_shadow
-    //background-color: #f9f9f9
+    background-color: #fff
     border-top: 2px solid #e5e5e5
     border-left: 2px solid #e5e5e5
     box-shadow: 2px 2px 2px 1px #ccc
+  &.btn_pink
+    color: $pink
+    &, &:before, &:after
+      border-color: $pink
+  &.btn_200w
+    text-align: center
+    min-width: 200px
+
+
 .graph
   position: relative
   .graph__control
     position: absolute
-    top: 0
-    right: 0
+    top: 24px
+    right: 10px
+    .switcher
+      margin-right: 5px
   .graph__content
     //background-color: #ccc
     display: block
     vertical-align: top
     img
       height: 100%
+      width: 100%
 .header-text
-  font-size: 20px
+
+  font-size: 22px
+  letter-spacing: 0.02em
 .section-icon
   margin: 0 20px 20px 0
   float: left
 .section
-  margin-top: 80px
+  margin-top: 70px
   position: relative
   .section__text
-    padding-left: 40px
+    padding-left: 70px
 
 .form__row
-  margin-top: 10px
+  margin-top: 20px
   display: block
 .input-label
   font-weight: 400
+
   color: #606060
   margin-bottom: 5px
 
@@ -216,6 +275,15 @@ $prefix: 'fi'
   width: 100%
   border: 1px solid #939393
   +border-radius(1px)
-  padding: 7px 10px 8px
+  padding: 10px
   +placeholder
     font-weight: 200
+
+.col-1000w
+  max-width: 1060px
+  margin-left: auto
+  margin-right: auto
+.col-800w
+  max-width: 850px
+  margin-left: auto
+  margin-right: auto
