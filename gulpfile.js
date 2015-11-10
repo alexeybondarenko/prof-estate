@@ -33,17 +33,19 @@ gulp.task('clean', function () {
 
 // SASS to CSS
 gulp.task('build-styles', function() {
-    return gulp.src('./src/css/**/*.{sass,scss}')
+    return gulp.src('./src/css/**/*.{sass,scss}', {base: './'})
         .pipe(compass({
-            project: path.join(__dirname, ''),
-            //config_file: './config.rb',
-            http_path: '/',
-            generated_images_path: 'www/images',
-            css: 'www/css',
-            sass: 'src/css',
-            relative: true,
-            debug: !argv.production,
-            style: argv.production ? 'compressed' : 'nested'
+          config_file: './config.rb',
+          project: path.join(__dirname, ''),
+          http_images_path: '/images',
+          generated_images_path: 'www/images',
+          http_path: '/',
+          css: 'www/css',
+          sass: 'src/css',
+          image: 'src/images',
+          //debug: !argv.production,
+          relative: true
+          //style: argv.production ? 'compressed' : 'nested'
         }))
         .pipe(autoprefixer({
             browsers: ['last 4 versions', 'ie 8'],
@@ -101,7 +103,7 @@ gulp.task('watch', function() {
 // Deploy gh-pages
 gulp.task('deploy-prefix', function() {
   return gulp.src('./www/**/*.html')
-     .pipe(prefix('/'))
+     //.pipe(prefix('/'))
     .pipe(gulp.dest('./www'));
 });
 
